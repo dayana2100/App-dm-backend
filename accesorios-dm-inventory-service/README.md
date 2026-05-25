@@ -39,8 +39,8 @@ Este microservicio requiere la base de datos `accesorios-dm-database`. Debes ten
 ### Clonar la base de datos
 
 ```bash
-git clone https://github.com/SergioLosadaDev/accesorios-dm-database.git
-cd accesorios-dm-database
+git clone https://github.com/dayana2100/App-dm-database.git
+cd App-dm-database
 ```
 
 ### Levantar la base de datos (ambiente develop)
@@ -85,7 +85,7 @@ spring:
 ## Opción 1: Con Docker (Recomendado)
 ```bash
 # 1. Asegurar que la base de datos está corriendo
-cd ../accesorios-dm-database
+cd ../App-dm-database
 docker-compose -f docker-compose.yml up -d
 
 # 2. Volver al microservicio
@@ -105,7 +105,7 @@ docker-compose logs -f
 
 ```bash
 # 1. Asegurar que la base de datos está corriendo
-cd ../accesorios-dm-database
+cd ../App-dm-database
 docker-compose -f docker-compose.yml up -d
 
 # 2. Volver al microservicio
@@ -242,7 +242,7 @@ docker exec -it accesorios-dm-inventory-service sh
 **Solución:**
 ```bash
 # Verificar que la BD está corriendo
-cd ../accesorios-dm-database
+cd ../App-dm-database
 docker-compose -f docker-compose.yml ps
 
 # Si no está, levantarla
@@ -261,7 +261,7 @@ docker-compose -f docker-compose.yml up -d
 
 **Solución:**
 ```bash
-cd ../accesorios-dm-database
+cd ../App-dm-database
 docker-compose -f docker-compose.yml down -v
 docker-compose -f docker-compose.yml up -d
 ```
@@ -292,12 +292,12 @@ Nota: Dentro de la red Docker, la BD siempre escucha en el puerto 5432.
 # Crear rama para nueva funcionalidad
 git checkout develop
 git pull origin develop
-git checkout -b HU-DEV-JSA-XX-nombre
+git checkout -b HU-XX-develop-inventory-nombre
 
 # Hacer cambios...
 git add .
-git commit -m "feat: HU-DEV-JSA-XX descripcion"
-git push origin HU-DEV-JSA-XX-nombre
+git commit -m "feat: descripcion"
+git push origin HU-XX-develop-inventory-nombre
 
 # Crear Pull Request a develop
 ```
@@ -315,6 +315,3 @@ git push origin HU-DEV-JSA-XX-nombre
 
 ## Licencia
 Proyecto interno de Accesorios DM.
-
-## Contacto
-Repositorio: https://github.com/SergioLosadaDev/accesorios-dm-inventory-service
